@@ -1,0 +1,36 @@
+ul {
+    display: flex;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+}
+
+li {
+    padding: 1rem;
+
+}
+
+/* only for visual purpose*/
+nav {
+    background: #8f3b76;
+}
+
+ul {
+    list-style: none;
+}
+
+.title{
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.github:hover {
+    background: #cb80b5;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}

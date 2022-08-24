@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app_outer{
+    flex: 1;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.app_boards{
+    height: 100%;
+    min-width: fit-content;
+    display: flex;
+    gap: 30px;
+}
+
+.add_boards{
+    margin: 10px;
+    min-width: 290px;
+    width: 290px;
+}

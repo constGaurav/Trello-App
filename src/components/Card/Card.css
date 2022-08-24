@@ -1,0 +1,48 @@
+.card{
+    display: flex;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.card_top{
+    display: flex;
+    gap: 5px;
+}
+
+.card_top_title{
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.card_top .card_delete{
+    opacity: 0;
+    transition: 200ms;
+}
+
+.card:hover .card_delete{
+    opacity: 1;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+.card_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_top img{
+    opacity: 0;
+    transition: 200ms;
+}
+
+.card:hover img {
+    opacity: 1;
+    cursor: pointer;
+}
