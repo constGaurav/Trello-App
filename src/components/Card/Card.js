@@ -25,10 +25,6 @@ const Card = (props) => {
             event.preventDefault();
             props.updateCard(props.boardId, props.cardId, inputValues);
             setShowEditForm(false);
-            setInputValue({
-              title: props.title,
-              description: props.description,
-            });
           }}
         >
           Title:
@@ -85,8 +81,10 @@ const Card = (props) => {
             >
               X
             </p>
-          </div>
-          <div className="card_footer">{props.description}</div>
+            </div>
+            {
+              props.description === "" ? "":<div className="card_footer">{props.description}</div>
+            }
         </div>
       )}
     </div>

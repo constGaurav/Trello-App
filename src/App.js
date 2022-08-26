@@ -68,7 +68,7 @@ const App = () => {
     const card = {
       id: Date.now() + Math.random(),
       title,
-      description: "Click on Edit icon to edit description",
+      description:""
     };
 
     const index = boards.findIndex((board) => board.id === bid);
@@ -91,7 +91,6 @@ const App = () => {
     cards.splice(cardIndex, 1);
     setBoards(tempBoards);
   };
-
 
   // Edit Card Details
   const updateCard = (bid, cid, value) => {
@@ -143,8 +142,8 @@ const App = () => {
 
     const tempBoards = [...boards];
     const tempCard = tempBoards[srcBoardIndex].cards[srcCardIndex];
-    tempBoards[srcBoardIndex].cards.splice(srcCardIndex, 1);
-    tempBoards[targetBoardIndex].cards.splice(targetCardIndex, 0, tempCard);
+    tempBoards[srcBoardIndex].cards.splice(srcCardIndex, 1); // removing from src
+    tempBoards[targetBoardIndex].cards.splice(targetCardIndex, 0, tempCard); // adding into target
     setBoards(tempBoards);
     setTarget({
       cardId: "",
