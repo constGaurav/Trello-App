@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddCard from "./components/AddCard/AddCard";
 import Board from "./components/Board/Board";
@@ -44,6 +44,10 @@ const App = () => {
     cardId: "",
     boardId: "",
   });
+
+  useEffect(() => {
+    document.title = `${boards.length} Boards`;
+  }, [boards])
 
   // Board Manipulation
   const addBoard = (title) => {
